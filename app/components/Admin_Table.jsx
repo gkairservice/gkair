@@ -16,7 +16,18 @@ const Admin_Table = ({passenger}) => {
     const [filter, setFilter]= useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
-    
+    const [pass, setPass]= useState({
+        name:"",
+        mofa:"",
+        medical:"",
+        visa_no:"",
+        bio_finger:"",
+        bmet_finger:"",
+        training:"",
+        delivery:"",
+        manpower:"",
+
+    });
     
     const user =  typeof window !== "undefined" ? JSON.parse(window.localStorage.getItem('user')) : false;
     useEffect(()=>{
